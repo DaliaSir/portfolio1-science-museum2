@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/6cd67d9dd2.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="description" content="Contact Community Science Museum">
+    <meta name="keywords" content="science, museum, contact, contact us, send message, contact information">
+    <meta name="author" content="Dalia Sireikyte">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | COMMUNITY SCIENCE MUSEUM</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header" id="top">
+        <a href="index.html" title="logo" class="logo">
+            <img src="images/logo-community-science-museum.png" alt="Logo Community Science Museum">
+        </a>
+        <button class="hamburger-btn"></button>
+        <nav class="home_nav">
+            <ul class="home_nav-list">
+                <li><a href="index.html" title="Home" class="navList">Home</a></li>
+                <li><a href="visit.html" title="Visit" class="navList">Visit</a></li>
+                <li><a href="exhibitions.html" title="Exhibitions" class="navList">Exhibitions</a></li>
+                <li><a href="events.html" title="Events" class="navList">Events</a></li>
+                <li><a href="get-involved.html" title="Get Involved" class="navList">Get Involved</a></li>    
+                <li><a href="contact.html" title="Contact Us" class="navList" id="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact_main">
+        <section class="main-intro contact_main-intro">
+            <div class="main-intro-text">
+                <h1>Contact<br> Us</h1>
+                <h2>Explore together</h2>
+                <p>Get in touch to get information about special tours, activities or if you have any other question.
+                    Check our VISIT page for all the practical information.</p>
+                <a href="visit.html" title="Plan your visit" class="button">Visit</a>
+            </div>
+        </section>
+        <div class="contact_form">
+            <div id="message"></div>
+            <form action="#" method="POST" id="contact-form">
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name">
+                    <div class="form-error" id="nameError">Please enter your full name</div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="e-mail" placeholder="Your e-mail">
+                    <div class="form-error" id="emailError">
+                        Please enter a valid email address
+                    </div>
+                    <label for="select-subject">Subject</label>
+                    <select name="subject" id="select-subject">
+                        <option value="">Please select a subject...</option>
+                        <option value="exhibitions">Exhibitions</option>
+                        <option value="events">Events</option>
+                        <option value="group-tours">Group tours</option>
+                        <option value="support">Support</option>
+                        <option value="internship">Internship</option>
+                        <option value="volunteering">Volunteering</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="contact-message">Message</label>
+                    <textarea name="message" id="contact-message" cols="30" rows="10"
+                        placeholder="Type here.."></textarea>
+                    <input type="submit" value="Send">
+                </fieldset>
+            </form>
+        </div>
+        <section class="contact_information">
+            <div class="contact_information-info">
+                <h3>Contact Info</h3>
+                <p>
+                    Observatoriegata 1,
+                    <br>
+                    0254 Oslo
+                    <br>
+                    Norway
+                </p>
+                <a href="mailto:name@email.com">info@communitysm.org</a>
+                <p>+47 967 89 123</p>
+            </div>
+            <div class="contact_information-social">
+                <a href="#" class="icon" title="Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="icon" title="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="icon" title="Twiter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+        <div class="contact_map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.1567965660856!2d10.715709416538825!3d59.912945081866866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416c2b1ee517cd%3A0x75a671e4b443c53d!2sObservatoriegata%201%2C%200254%20Oslo!5e0!3m2!1sen!2sno!4v1599642096432!5m2!1sen!2sno"
+                allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <div class="back-to-top">
+            <a href="#top" title="Back to Top">Back to Top
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+        <div class="footer-wrapper">
+            <div class="footer-wrapper-column column-location">
+                <a href="index.html" title="Home" class="logo">
+                    <img src="images/logo-community-science-museum.png" alt="Logo Community Science Museum">
+                </a>
+                <h4>Location</h4>
+                <p>
+                    Observatoriegata 1,
+                    <br>
+                    0254 Oslo
+                </p>
+            </div>
+
+            <div class="footer-wrapper-column column-hours">
+                <h4>Opening Hours</h4>
+                <table>
+                    <tr>
+                        <th>Monday:</th>
+                        <td>Closed</td>
+                    </tr>
+                    <tr>
+                        <th>Tuesday:</th>
+                        <td>10:00 – 16:00</td>
+                    </tr>
+                    <tr>
+                        <th>Wednesday:</th>
+                        <td>10:00 – 16:00</td>
+                    </tr>
+                    <tr>
+                        <th>Thursday:</th>
+                        <td>10:00 – 16:00</td>
+                    </tr>
+                    <tr>
+                        <th>Friday:</th>
+                        <td>10:00 – 19:00</td>
+                    </tr>
+                    <tr>
+                        <th>Saturday:</th>
+                        <td>9:00 – 16:00</td>
+                    </tr>
+                    <tr>
+                        <th>Sunday:</th>
+                        <td>9:00 – 13:00</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="footer-wrapper-column column-contact">
+                <h4>Contact</h4>
+                <a href="mailto:name@email.com" class="footer-email">info@communitysm.org</a>
+                <p>+47 967 89 123</p>
+                <p>or write us a message <a href="contact.html" title="Contact Us">here</a></p>
+                <a href="#" class="icon" title="Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="icon" title="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="icon" title="Twiter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="footer-wrapper-column column-navigation">
+                <h4>Navigation</h4>
+                <a href="index.html" title="Home">Home</a>
+                <a href="visit.html" title="Visit">Visit</a>
+                <a href="exhibitions.html" title="Exhibition Spaces">Exhibitions</a>
+                <a href="events.html" title="Special Events">Events</a>
+                <a href="get-involved.html" title="Get Involved">Get Involved</a>
+                <a href="contact.html" title="Contact Us">Contact</a>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>Copyright &copy; 2020 Community Science Museum</p>
+        </div>
+    </footer>
+    <script src="js/contact.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+
+</html>

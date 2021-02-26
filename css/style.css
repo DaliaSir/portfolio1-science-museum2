@@ -1,0 +1,1363 @@
+/* COLOR
+
+Color Theme Swatches in Hex 
+color: #D91A83; - rose
+color: #73206D; - purple
+color: #351C59; - dark violet
+color: #3DADD9; - light blue
+color: #F6A448; - mustard yellow
+color: #3AAA35; - green
+
+Color Theme Swatches in RGBA
+color: rgba(217, 26, 131, 1); - rose
+color: rgba(115, 32, 109, 1); - purple
+color: rgba(53, 28, 89, 1); } - dark violet
+color: rgba(61, 173, 217, 1); - light blue
+color: rgba(246, 164, 72, 1); - mustard yellow
+*/
+
+/* FONT
+
+font-family: 'Jura', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/*Icons at exhibion.html made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+                <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+                <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+*/
+
+/* ------------------------------------------------------------ GENERAL STYLES ----------------------------------------------------------------- */
+
+html {
+  background-color: #e1e1e1;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+h1 {
+  font-family: "Jura", "Tahoma", sans-serif;
+  font-size: 2.75em;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h3,
+h4 {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+a {
+  font-family: "Jura", "Tahoma", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  background-color: #3dadd9;
+  color: #ffffff;
+  padding: 10px 28px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 1px 1px 6px 1px rgba(53, 28, 89, 0.2);
+  margin: 10px 0px;
+}
+
+.button:hover {
+  background-color: rgba(61, 173, 217, 0.7);
+  transition: 0.2s;
+}
+
+.button:active {
+  background-color: rgba(61, 173, 217, 1);
+  font-size: 1.8em;
+}
+
+.back-to-top {
+  color: #000000;
+  background-color: #ffffff;
+  padding: 25px 0px;
+  text-align: center;
+  margin: 0;
+}
+
+.back-to-top a {
+  color: #000000;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
+
+.back-to-top a:active {
+  font-size: 1.6em;
+  color: #f6a448;
+}
+
+/* ------------------------------------------------------------ HEADER ----------------------------------------------------------------- */
+
+.header img {
+  width: 100px;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.header {
+  background: rgba(53, 28, 89, 1);
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    34deg,
+    rgba(115, 32, 109, 1) 0%,
+    rgba(53, 28, 89, 1) 36%,
+    rgba(61, 173, 217, 1) 100%
+  );
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.hamburger-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-image: url("../images/ham-btn-open.svg");
+  background-size: 100%;
+  background-color: transparent;
+  z-index: 10;
+  cursor: pointer;
+  outline: none;
+}
+
+.hamburger-btn:hover {
+  opacity: 0.5;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  padding: 15px; 
+  margin: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navList:hover {
+  text-decoration: underline;
+}
+
+.navList:active {
+  opacity: 0.6;
+}
+  
+.home_nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+  box-shadow: 0px 8px 16px 0px rgba(53, 28, 89, 0.4);
+  background: rgba(53, 28, 89, 1);
+  background: linear-gradient(
+    34deg,
+    rgba(115, 32, 109, 1) 0%,
+    rgba(53, 28, 89, 1) 36%,
+    rgba(61, 173, 217, 1) 100%
+  );
+  z-index: 9;
+}
+
+.navShow {
+  transform: translateY(0);
+} 
+
+.navClose {
+  background-image: url("../images/ham-btn-closed.svg");
+}
+
+.header ul {
+  margin: 0;
+  padding: 4rem 1rem 1rem 1rem;
+  list-style: none;
+}
+
+
+header .logo:hover,
+footer .logo:hover {
+  opacity: 0.6;
+}
+
+header .logo:active,
+footer .logo:active {
+  opacity: 1;
+}
+
+#active {
+  color: #f6a448;
+}
+
+/* ------------------------------------------------------------ FOOTER ----------------------------------------------------------------- */
+
+footer {
+  background-color: #351c59;
+  color: #ffffff;
+}
+.footer-wrapper {
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.footer-wrapper-column {
+  margin: 0 10px;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.footer__copy {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid rgba(256, 256, 256, 0.5);
+}
+
+.column-location img {
+  max-width: 150px;
+  margin: 24px 0;
+  background: none;
+}
+
+.column-hours tr {
+  text-align: left;
+}
+
+.column-hours td {
+  text-align: right;
+}
+
+.column-hours td {
+  padding: 0 0 0 15px;
+}
+
+.column-contact a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: lowercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+.footer-email {
+  font-weight: 400;
+}
+
+.column-contact a:hover {
+  text-decoration: underline;
+}
+
+.column-contact a:active {
+  color: #f6a448;
+  font-size: 1.3em;
+}
+
+.column-contact a i {
+  padding-right: 15px;
+}
+
+.column-contact a i:hover {
+  color: #f6a448;
+}
+
+.column-contact a i:active {
+  font-size: 1.3em;
+}
+
+.column-navigation a {
+  display: block;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.column-navigation a:hover {
+  text-decoration: underline;
+}
+
+.column-navigation a:active {
+  color: #f6a448;
+  font-size: 1.3em;
+}
+
+/* -------------------------------- Intro -------------------------------- */
+
+.main-intro {
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 770px;
+  width: 100%;
+  background-size: cover;
+}
+
+.main-intro-text {
+  background-color: rgba(115, 32, 109, 0.9);
+  margin: 0 5%;
+  padding: 15px;
+  max-width: 360px;
+  height: 410px;
+  box-shadow: 2px 5px 25px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  color: #ffffff;
+  position: relative;
+  top: 90px;
+  z-index: 1;
+}
+
+.main-intro-text p {
+  line-height: 140%;
+}
+
+.main-intro-text h2 {
+  margin-top: 40px;
+}
+
+.main-intro-text h1 {
+  display: block;
+  max-width: 200px;
+  margin-top: 30px;
+}
+
+.main-intro-text a {
+  position: absolute;
+  bottom: 3%;
+}
+
+.home_main-intro {
+  background-image: url("../images/home/home-main-milky-way-greg-rakozy-m.jpg");
+}
+
+.visit_main-intro {
+  background-image: url("../images/visit/visit-main-scott-webb-m.jpg");
+}
+
+.exhibitions_main-intro {
+  background-image: url("../images/exhibitions/exhibitions-main-michal-parzuchowski-m.jpg");
+}
+
+.events_main-intro {
+  background-image: url("../images/events/events-main-rodolfo-cuadros-m.jpg");
+}
+
+.get-involved_main-intro {
+  background-image: url("../images/get-involved/get-involved-main-grant-ritchie-m.jpg");
+}
+
+.contact_main-intro {
+  background-image: url("../images/contact/contact-main-william-bout-m.jpg");
+}
+
+/* -------------------------------------------------------------------- HOME PAGE 
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/*----------EXHIBITIONS----------*/
+
+.home_main-exhibition-spaces {
+  background-color: #ffffff;
+  color: #351c59;
+}
+
+.home_main-exhibitions-container {
+  display: flex;
+  text-align: left;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+}
+
+.home_main-exhibitions-content {
+  color: #000000;
+  padding: 20px;
+}
+
+.home_main-exhibitions {
+  margin: 20px;
+  background-color: #e1e1e1;
+  border-radius: 0 0 6px 6px;
+}
+
+.home_main-exhibitions-text {
+  background-color: #f6a448;
+  background: linear-gradient(
+    186deg,
+    rgba(246, 164, 72, 1) 39%,
+    rgba(217, 26, 131, 1) 100%
+  );
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 40px 10%;
+  border-radius: 6px;
+  display: none;
+}
+
+.home_main-exhibitions-text p {
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+/*----------UPCOMING EVENTS----------*/
+
+.home_main-upcoming-events,
+.home_main-exhibition-spaces {
+  text-align: center;
+  padding: 40px 20px;
+}
+.home_main-upcoming-events h2 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.home_main-upcoming-events {
+  background-color: #351c59;
+}
+
+.home_main-upcoming-events a,
+.home_main-exhibition-spaces a {
+  margin: 20px;
+}
+
+.home_main-event-container {
+  display: flex;
+  text-align: left;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+}
+
+.home_main-event-content {
+  padding: 25px 20px 20px 20px;
+}
+
+.home_main-event {
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 0 0 6px 6px;
+}
+
+.home_main-event img,
+.home_main-exhibitions img {
+  width: 100%;
+}
+
+.big-img {
+  display: none;
+}
+
+/*----------YOUNG STARS CLUB----------*/
+
+.home_main-young-stars-club {
+  background-image: url(../images/home/home-children-science-lab.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 330px;
+  background-size: cover;
+  width: 100%;
+}
+
+.home_main-young-stars-club-text {
+  color: #ffffff;
+  font-size: 1.125em;
+  background-color: rgba(115, 32, 109, 0.9);
+  text-align: center;
+  padding: 20px 40px;
+  position: relative;
+  top: 15%;
+  margin: 0 5%;
+  border-radius: 6px;
+}
+
+.home_main-young-stars-club-text h2 {
+  font-size: 1.5em;
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+.home_main-young-stars-club-text p {
+  margin: 10px 0;
+}
+
+/* -------------------------------------------------------------------- VISIT 
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.visit_location,
+.visit_food,
+.visit_shop {
+  background-color: #351c59;
+  color: #ffffff;
+}
+
+.visit_location,
+.visit_food,
+.visit_shop,
+.visit_hours,
+.visit_admission,
+.visit_accessibility,
+.visit_shools {
+  padding: 5%;
+}
+
+.visit_food img,
+.visit_shop img {
+  width: 100%;
+}
+
+.visit_shools {
+  background-color: #f6a448;
+  background: linear-gradient(
+    186deg,
+    rgba(246, 164, 72, 1) 39%,
+    rgba(217, 26, 131, 1) 100%
+  );
+  text-align: center;
+  color: #ffffff;
+}
+
+.visit_admission {
+  background-color: #e1e1e1;
+  text-align: center;
+}
+
+.visit_accessibility,
+.visit_hours,
+.visit_location {
+  text-align: center;
+}
+
+.visit_location iframe {
+  border: none;
+  width: 80%;
+}
+
+.visit_hours h2,
+.visit_admission h2,
+.visit_accessibility h2 {
+  color: #351c59;
+  font-weight: 700;
+}
+
+.visit_hours tr {
+  text-align: left;
+}
+.visit_hours td {
+  text-align: right;
+}
+
+.visit_hours table th {
+  padding-right: 20px;
+}
+
+.visit_hours-content table {
+  margin: auto;
+}
+
+.visit_hours-location-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------------------------- EXHIBITIONS 
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.exibitions-describtion {
+  background-color: #f6a448;
+  background: linear-gradient(
+    186deg,
+    rgba(246, 164, 72, 1) 39%,
+    rgba(217, 26, 131, 1) 100%
+  );
+  color: #ffffff;
+  padding: 20px 5%;
+}
+.exibitions-describtion p {
+  font-weight: 500;
+  line-height: 1.5em;
+  font-style: italic;
+}
+
+.exhibition_links-icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 20px;
+  outline-color: #000000;
+  box-shadow: 3px 3px 3px rgba(53, 28, 89, 0.4);
+}
+.exhibition_links-icon1 {
+  background-color: #3dadd9;
+}
+.exhibition_links-icon2 {
+  background-color: #f6a448;
+}
+.exhibition_links-icon3 {
+  background-color: #351c59;
+}
+.exhibition_links-icon4 {
+  background-color: #3aaa35;
+}
+.exhibition_links-icon5 {
+  background-color: #d91a83;
+}
+.exhibitions_links {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 5%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.exhibition_links-icon {
+  margin: 0 20px;
+}
+.exhibition_links-icon a {
+  color: #000000;
+}
+.exhibition_links-icon img:hover {
+  width: 105px;
+  height: 105px;
+  opacity: 0.8;
+  transition: 0.1s;
+}
+.exhibition_links-icon img:active {
+  opacity: 1;
+}
+
+.exhibitions_cosmology,
+.exhibitions_robotics,
+.exhibitions_biology-medicine,
+.exhibitions_evolution,
+.exhibitions_ecology {
+  padding: 5%;
+}
+
+.exhibitions_cosmology,
+.exhibitions_robotics,
+.exhibitions_biology-medicine {
+  background-color: #351c59;
+  color: #ffffff;
+}
+
+.exhibitions_cosmology img,
+.exhibitions_robotics img,
+.exhibitions_biology-medicine img,
+.exhibitions_evolution img,
+.exhibitions_ecology img {
+  width: 100%;
+}
+
+/* -------------------------------------------------------------------- EVENTS
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.events_night {
+  background-color: #351c59;
+  padding: 5% 0;
+}
+
+.events_aeronautics,
+.events_night,
+.events_energetica {
+  text-align: left;
+}
+
+.events_aeronautics,
+.events_energetica {
+  background-color: #e1e1e1;
+  max-width: 280px;
+  border-radius: 0 0 6px 6px;
+  margin: 5% auto;
+}
+
+.events_aeronautics img,
+.events_night img,
+.events_energetica img {
+  width: 100%;
+}
+
+.events_night-content {
+  background-color: #ffffff;
+  color: #000000;
+  max-width: 280px;
+  border-radius: 0 0 6px 6px;
+  margin: 0 auto;
+}
+
+.events_events-content {
+  padding: 20px;
+}
+.events_subscribe {
+  background-color: #f6a448;
+  background: linear-gradient(
+    186deg,
+    rgba(246, 164, 72, 1) 39%,
+    rgba(217, 26, 131, 1) 100%
+  );
+  color: #ffffff;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.events_subscribe p {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.events_subscribe label {
+  font-size: 1.8em;
+  font-weight: 500;
+  font-style: italic;
+  padding-bottom: 1rem;
+}
+
+.events_subscribe input[type="submit"] {
+  display: inline-block;
+  background-color: #3dadd9;
+  color: #ffffff;
+  padding: 10px 28px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  box-shadow: 1px 1px 6px 1px rgba(53, 28, 89, 0.2);
+  margin: 10px 0px;
+  font-family: "Jura", "Tahoma", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.events_subscribe input[type="submit"]:hover {
+  background-color: rgba(61, 173, 217, 0.7);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.events_subscribe input[type="submit"]:active {
+  background-color: rgba(61, 173, 217, 1);
+  font-size: 1.8em;
+}
+
+.events_subscribe input[type="email"] {
+  width: 80%;
+  padding: 10px 20px;
+  margin: 20px;
+  display: inline-block;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 1.5em;
+  cursor: text;
+}
+
+.events_subscribe input[type="email"]:focus {
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------- GET INVOLVED
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.get-involved_support,
+.get-involved_researchers {
+  background-color: #351c59;
+  color: #ffffff;
+}
+
+.get-involved_contact {
+  background-color: #f6a448;
+  background: linear-gradient(
+    186deg,
+    rgba(246, 164, 72, 1) 39%,
+    rgba(217, 26, 131, 1) 100%
+  );
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 5%;
+}
+
+.get-involved_volunteer,
+.get-involved_support,
+.get-involved_internships,
+.get-involved_researchers {
+  padding: 5%;
+}
+
+.get-involved_volunteer img,
+.get-involved_support img,
+.get-involved_internships img,
+.get-involved_researchers img {
+  width: 100%;
+}
+
+/* -------------------------------------------------------------------- CONTACT
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.contact_form fieldset {
+  padding: 5%;
+  margin: 0 auto;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  max-width: 720px;
+  border: none;
+}
+
+.contact_form input[type="text"],
+.contact_form input[type="email"],
+.contact_form select,
+.contact_form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 0.5rem 0 2rem 0;
+  resize: vertical;
+  display: block;
+  background-color: #f7f7f7;
+  cursor: text;
+  font-size: 1.125em;
+  font-family: inherit;
+}
+
+.contact_form select {
+  cursor: pointer;
+}
+
+.contact_form input[type="submit"] {
+  display: inline-block;
+  background-color: #3dadd9;
+  color: #ffffff;
+  padding: 10px 28px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  box-shadow: 1px 1px 6px 1px rgba(53, 28, 89, 0.2);
+  margin: 10px 0px;
+  font-family: "Jura", "Tahoma", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.contact_form input[type="submit"]:hover {
+  background-color: rgba(61, 173, 217, 0.7);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.contact_information {
+  background-color: #351c59;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.contact_information-info {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 5%;
+}
+
+.contact_information-social {
+  padding: 5%;
+  margin: 5%;
+}
+
+.contact_information-info a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: lowercase;
+  font-family: "Roboto", sans-serif;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.contact_information-info a:hover {
+  text-decoration: underline;
+}
+
+.contact_information-info a:active {
+  color: #f6a448;
+  font-size: 1.8em;
+}
+
+.contact_information-social a i {
+  padding-right: 15px;
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+.contact_information-social a i:hover {
+  color: #f6a448;
+  transition: 0.1s;
+}
+
+.contact_information-social a i:active {
+  font-size: 1.8em;
+}
+
+.contact_map iframe {
+  width: 100%;
+  border: none;
+  height: 330px;
+}
+
+.form-error {
+  display: none;
+  color: #ff0000;
+  font-size: 0.9rem;
+  margin: 0 0 2rem 0;
+}
+
+.message {
+  background: #04bf8a;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.075rem;
+  padding: 1rem;
+  color: #ffffff;
+  margin-top: 1.5rem;
+}
+
+/* -------------------------------------------------------------------- MEDIA QUERIES 
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media all and (min-width: 600px) {
+  
+  /*----------FOOTER----------*/
+
+  .column-hours table,
+  .column-navigation a,
+  .column-contact a {
+    font-size: 1.125em;
+  }
+
+  /*----------INTRO----------*/
+
+  .main-intro {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 770px;
+    width: 100%;
+  }
+  .home_main-intro {
+    background-image: url("../images/home/home-main-milky-way-greg-rakozy.jpg");
+  }
+  .visit_main-intro {
+    background-image: url("../images/visit/visit-main-scott-webb.jpg");
+  }
+  .exhibitions_main-intro {
+    background-image: url("../images/exhibitions/exhibitions-main-michal-parzuchowski.jpg");
+  }
+  .events_main-intro {
+    background-image: url("../images/events/events-main-rodolfo-cuadros.jpg");
+  }
+  .get-involved_main-intro {
+    background-image: url("../images/get-involved/get-involved-main-grant-ritchie.jpg");
+  }
+  .contact_main-intro {
+    background-image: url("../images/contact/contact-main-william-bout.jpg");
+  }
+
+  .main-intro-text h2 {
+    margin-top: 30px;
+  }
+
+  .main-intro-text {
+    min-height: 450px;
+  }
+
+  /*----------FONT SIZE----------*/
+
+  h1 {
+    font-size: 3.5em;
+    letter-spacing: -0.04em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1.125em;
+  }
+
+  /*----------HOME----------*/
+
+  .home_main-event-container,
+  .home_main-exhibitions-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .small-img {
+    display: none;
+  }
+
+  .big-img {
+    display: inline-block;
+  }
+
+  .home_main-event-content {
+    max-width: 455px;
+  }
+
+  .home_main-exhibitions-text {
+    display: inline-block;
+  }
+
+  .home_main-young-stars-club-text {
+    top: 20%;
+    margin: 0 10%;
+  }
+
+  .home_main-exhibitions-content {
+    max-width: 455px;
+  }
+
+  .home_main-upcoming-events h2,
+  .home_main-exhibition-spaces h2 {
+    font-size: 2.5em;
+  }
+
+  /*----------VISIT----------*/
+
+  .visit_food img,
+  .visit_shop img {
+    float: left;
+    margin: 0 5% 10px 0;
+    width: 495px;
+  }
+
+  .visit_food,
+  .visit_shop {
+    min-height: 330px;
+  }
+
+  .visit_accessibility,
+  .visit_schools {
+    clear: left;
+  }
+
+  .visit_food h2,
+  .visit_shop h2 {
+    margin-top: 0;
+  }
+
+  .visit_hours tr {
+    font-size: 1.125em;
+  }
+
+  .visit_location iframe {
+    min-height: 330px;
+  }
+
+  .visit_hours-location-container {
+    flex-direction: row;
+  }
+
+  .visit_location,
+  .visit_hours {
+    width: 100%;
+  }
+
+  /*----------EXHIBITIONS----------*/
+
+  .exhibitions_links {
+    flex-direction: row;
+  }
+
+  .exhibition_links-icon h2 {
+    font-size: 2.25em;
+  }
+
+  .exhibitions_cosmology img,
+  .exhibitions_robotics img,
+  .exhibitions_biology-medicine img {
+    float: left;
+    margin: 0 5% 10px 0;
+  }
+
+  .exhibitions_evolution img,
+  .exhibitions_ecology img {
+    float: right;
+    margin: 0 0 10px 5%;
+  }
+
+  .exhibitions_cosmology,
+  .exhibitions_robotics,
+  .exhibitions_biology-medicine,
+  .exhibitions_evolution,
+  .exhibitions_ecology {
+    display: inline-block;
+  }
+
+  .exhibitions_cosmology img,
+  .exhibitions_robotics img,
+  .exhibitions_biology-medicine img,
+  .exhibitions_evolution img,
+  .exhibitions_ecology img {
+    width: 495px;
+  }
+
+  .exhibitions_cosmology h2,
+  .exhibitions_robotics h2,
+  .exhibitions_biology-medicine h2,
+  .exhibitions_evolution h2,
+  .exhibitions_ecology h2 {
+    margin-top: 0;
+  }
+
+  /*----------EVENTS----------*/
+
+  .events_aeronautics img,
+  .events_night img,
+  .events_energetica img {
+    width: 495px;
+  }
+
+  .events_aeronautics,
+  .events_energetica,
+  .events_night-content {
+    max-width: 495px;
+  }
+  .events_subscribe input[type="email"] {
+    width: 50%;
+  }
+
+  /*----------GET INVOLVED----------*/
+
+  .get-involved_volunteer img,
+  .get-involved_internships img {
+    float: right;
+    margin: 0 0 10px 5%;
+  }
+
+  .get-involved_support img,
+  .get-involved_researchers img {
+    float: left;
+    margin: 0 5% 10px 0;
+  }
+
+  .get-involved_volunteer,
+  .get-involved_support,
+  .get-involved_internships,
+  .get-involved_researchers {
+    display: inline-block;
+  }
+
+  .get-involved_volunteer img,
+  .get-involved_support img,
+  .get-involved_internships img,
+  .get-involved_researchers img {
+    width: 495px;
+  }
+
+  .get-involved_volunteer h2,
+  .get-involved_support h2,
+  .get-involved_internships h2,
+  .get-involved_researchers h2 {
+    margin-top: 0;
+  }
+
+  /*----------CONTACT----------*/
+
+  .contact_information {
+    flex-direction: row;
+  }
+
+  .contact_information-info {
+    border-bottom: none;
+    border-right: 1px solid #e1e1e1;
+  }
+
+  .contact_information-info a {
+    font-size: 1.5em;
+  }
+}
+
+@media all and (min-width: 960px) {
+
+  .main-intro-text {
+    top: 110px;
+  }
+
+  .column-hours table,
+  .column-navigation a,
+  .column-contact a {
+    font-size: 1.5em;
+  }
+
+  .home_main-event-container {
+    justify-content: center;
+  }
+
+  .home_main-event {
+    margin: 60px;
+  }
+
+  h3,
+  h4 {
+    font-size: 2.25em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  .main-intro-text p {
+    font-size: 1.125em;
+  }
+
+  .main-intro-text h2 {
+    font-size: 2.25em;
+  }
+
+  .visit_hours tr {
+    font-size: 1.5em;
+  }
+
+  /*----------EVENTS----------*/
+
+  .events_aeronautics img,
+  .events_night img,
+  .events_energetica img {
+    width: 800px;
+  }
+
+  .events_aeronautics,
+  .events_energetica,
+  .events_night-content {
+    max-width: 800px;
+  }
+
+  .events_subscribe input[type="email"] {
+    width: 30%;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+  }
+
+  .home_nav {
+    display: flex;
+    align-items: center;
+    height: 80px; 
+    transform: none; 
+    transition: none;
+    position: static;
+    background: none;
+    box-shadow: none;
+  }
+
+  header .home_nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .navList {
+    padding: 30px 0; 
+    margin: 0;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+
+  .header img {
+    width: 110px;
+  }
+
+  .header li a {
+    padding: 15px;
+  }
+}
+
+@media all and (min-width: 1270px) {
+  .header li a {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media all and (min-width: 1690px) {
+  .header img {
+    width: 120px;
+  }
+
+  .header li a {
+    font-size: 2rem;
+  }
+
+  .home_main-intro {
+    background-image: url("../images/home/home-main-milky-way-greg-rakozy-big.jpg");
+  }
+}
