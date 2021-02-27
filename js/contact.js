@@ -3,27 +3,42 @@ const name = document.querySelector("#name");
 const nameError = document.querySelector("#nameError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
+const text = document.querySelector("#contact-message");
+const textCounter = document.querySelector("#textCounter");
+const select = document.querySelector("#select-subject");
+const selectError = document.querySelector("#selectError");
+
 
 function validateForm(event) {
   event.preventDefault();
 
   if (checkLength(name.value, 1) === true) {
     nameError.style.display = "none";
+    name.className = "contact_form-name";
   } else {
     nameError.style.display = "block";
+    name.className = "form-error-border";
   }
 
   if (validateEmail(email.value) === true) {
     emailError.style.display = "none";
+    email.className = "contact_form-email";
   } else {
     emailError.style.display = "block";
+    email.className = "form-error-border";
   }
 
-  
-  if (
-    checkLength(name.value, 1) &&
-    validateEmail(email.value) 
-  ) {
+  if (checkLength(select.value, 0) === true) {
+    selectError.style.display = "none";
+    select.className = "contact_form-select";
+  } else {
+    selectError.style.display = "block";
+    select.className = "form-error-border";
+  }
+
+
+
+  if (checkLength(name.value, 1) && validateEmail(email.value) && checkLength(select.value, 0)) {
     message.innerHTML = '<div class="message">Your message has been sent</div>';
     form.reset();
   } else {
@@ -41,8 +56,25 @@ function checkLength(value, len) {
   }
 }
 
+
+
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
   return patternMatches;
+}
+
+
+
+text.addEventListener("input", textCount);
+
+function textCount () {
+  const target = event.currentTarget;
+  const maxLength = target.attributes.maxLength.value;
+  const currentLength = target.value.trim().length;
+
+  if (currentLength <= maxLength) {
+    textCounter.style.display = "block";
+    textCounter.innerHTML = `${maxLength - currentLength}`;
+  } 
 }

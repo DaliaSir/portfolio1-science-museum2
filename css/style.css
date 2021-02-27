@@ -33,6 +33,7 @@ font-family: 'Roboto', sans-serif;
 
 html {
   background-color: #e1e1e1;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -89,44 +90,48 @@ a:hover {
 
 .button {
   display: inline-block;
-  background-color: #3dadd9;
   color: #ffffff;
   padding: 10px 28px;
-  border-radius: 6px;
   text-align: center;
-  box-shadow: 1px 1px 6px 1px rgba(53, 28, 89, 0.2);
+  box-shadow: 1px 1px 6px 1px rgba(53, 28, 89, 0.4);
   margin: 10px 0px;
+  font-weight: 700;
+  box-shadow: inset 0px 1px 0px 0px #93dbf5;
+  background: linear-gradient(to bottom, #205da2 50%, #23477d 100%);
+  background-color: #205da2;
+  border-radius: 6px;
+  border: 1px solid #205da2;
+  text-shadow: 0px 1px 0px #205da2;
 }
 
 .button:hover {
-  background-color: rgba(61, 173, 217, 0.7);
-  transition: 0.2s;
+  background: linear-gradient(to bottom, #23477d 5%, #205da2 100%);
+  background-color: #23477d;
 }
 
 .button:active {
-  background-color: rgba(61, 173, 217, 1);
-  font-size: 1.8em;
+  transform: translateY(2px);
 }
 
 .back-to-top {
-  color: #000000;
   background-color: #ffffff;
   padding: 25px 0px;
   text-align: center;
   margin: 0;
+  font-size: 2.5rem;
 }
 
 .back-to-top a {
-  color: #000000;
+  color: #f6a448;
 }
 
-.back-to-top a:hover {
-  text-decoration: underline;
+.back-to-top i:hover {
+  transform: translateY(-15px);
+  transition: 0.4s;
 }
 
 .back-to-top a:active {
-  font-size: 1.6em;
-  color: #f6a448;
+  color: #351c59;
 }
 
 /* ------------------------------------------------------------ HEADER ----------------------------------------------------------------- */
@@ -143,7 +148,7 @@ a:hover {
     34deg,
     rgba(115, 32, 109, 1) 0%,
     rgba(53, 28, 89, 1) 36%,
-    rgba(61, 173, 217, 1) 100%
+    rgba(32, 93, 162, 1) 100%
   );
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -171,24 +176,24 @@ a:hover {
 .navList {
   display: flex;
   flex-direction: column;
-  padding: 15px; 
+  padding: 15px;
   margin: 10px;
   text-align: center;
   letter-spacing: 2px;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 2rem;
   font-weight: 700;
 }
 
 .navList:hover {
-  text-decoration: underline;
+  transform: translateY(-3px);
 }
 
 .navList:active {
   opacity: 0.6;
 }
-  
+
 .home_nav {
   position: absolute;
   top: 0;
@@ -211,7 +216,7 @@ a:hover {
 
 .navShow {
   transform: translateY(0);
-} 
+}
 
 .navClose {
   background-image: url("../images/ham-btn-closed.svg");
@@ -223,7 +228,6 @@ a:hover {
   list-style: none;
 }
 
-
 header .logo:hover,
 footer .logo:hover {
   opacity: 0.6;
@@ -231,11 +235,12 @@ footer .logo:hover {
 
 header .logo:active,
 footer .logo:active {
-  opacity: 1;
+  transform: translateY(2px);
 }
 
 #active {
-  color: #f6a448;
+  transform: translateY(-3px);
+  border-bottom: 3px solid #f6a448;
 }
 
 /* ------------------------------------------------------------ FOOTER ----------------------------------------------------------------- */
@@ -267,7 +272,6 @@ footer {
 .column-location img {
   max-width: 150px;
   margin: 24px 0;
-  background: none;
 }
 
 .column-hours tr {
@@ -300,19 +304,20 @@ footer {
 
 .column-contact a:active {
   color: #f6a448;
-  font-size: 1.3em;
 }
 
-.column-contact a i {
-  padding-right: 15px;
+footer .icon i {
+  padding-right: 2rem;
+  font-size: 2rem;
 }
 
-.column-contact a i:hover {
+footer .icon:hover {
   color: #f6a448;
+  text-decoration: none;
 }
 
-.column-contact a i:active {
-  font-size: 1.3em;
+footer .icon:active {
+  opacity: 0.6;
 }
 
 .column-navigation a {
@@ -331,7 +336,6 @@ footer {
 
 .column-navigation a:active {
   color: #f6a448;
-  font-size: 1.3em;
 }
 
 /* -------------------------------- Intro -------------------------------- */
@@ -359,7 +363,8 @@ footer {
 }
 
 .main-intro-text p {
-  line-height: 140%;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .main-intro-text h2 {
@@ -369,12 +374,12 @@ footer {
 .main-intro-text h1 {
   display: block;
   max-width: 200px;
-  margin-top: 30px;
 }
 
 .main-intro-text a {
   position: absolute;
-  bottom: 3%;
+  bottom: 2%;
+  font-size: 1.8rem;
 }
 
 .home_main-intro {
@@ -435,9 +440,8 @@ footer {
   background: linear-gradient(
     186deg,
     rgba(246, 164, 72, 1) 39%,
-    rgba(217, 26, 131, 1) 100%
+    rgba(236, 91, 170, 1) 100%
   );
-  color: #ffffff;
   padding: 10px 20px;
   margin: 40px 10%;
   border-radius: 6px;
@@ -447,6 +451,8 @@ footer {
 .home_main-exhibitions-text p {
   font-style: italic;
   line-height: 1.5em;
+  color: #351c59;
+  font-weight: 500;
 }
 
 /*----------UPCOMING EVENTS----------*/
@@ -559,10 +565,14 @@ footer {
   background: linear-gradient(
     186deg,
     rgba(246, 164, 72, 1) 39%,
-    rgba(217, 26, 131, 1) 100%
+    rgba(236, 91, 170, 1) 100%
   );
   text-align: center;
-  color: #ffffff;
+}
+
+.visit_shools p {
+  color: #351c59;
+  font-weight: 500;
 }
 
 .visit_admission {
@@ -583,7 +593,8 @@ footer {
 
 .visit_hours h2,
 .visit_admission h2,
-.visit_accessibility h2 {
+.visit_accessibility h2,
+.visit_shools h2 {
   color: #351c59;
   font-weight: 700;
 }
@@ -617,7 +628,7 @@ footer {
   background: linear-gradient(
     186deg,
     rgba(246, 164, 72, 1) 39%,
-    rgba(217, 26, 131, 1) 100%
+    rgba(236, 91, 170, 1) 100%
   );
   color: #ffffff;
   padding: 20px 5%;
@@ -626,6 +637,7 @@ footer {
   font-weight: 500;
   line-height: 1.5em;
   font-style: italic;
+  color: #351c59;
 }
 
 .exhibition_links-icon img {
@@ -742,9 +754,8 @@ footer {
   background: linear-gradient(
     186deg,
     rgba(246, 164, 72, 1) 39%,
-    rgba(217, 26, 131, 1) 100%
+    rgba(236, 91, 170, 1) 100%
   );
-  color: #ffffff;
   padding: 20px 20px;
   text-align: center;
 }
@@ -752,25 +763,18 @@ footer {
 .events_subscribe p {
   font-weight: 500;
   font-size: 1.3rem;
+  color: #351c59;
 }
 
 .events_subscribe label {
   font-size: 1.8em;
-  font-weight: 500;
+  font-weight: 600;
   font-style: italic;
   padding-bottom: 1rem;
+  color: #351c59;
 }
 
 .events_subscribe input[type="submit"] {
-  display: inline-block;
-  background-color: #3dadd9;
-  color: #ffffff;
-  padding: 10px 28px;
-  border-radius: 6px;
-  border: none;
-  text-align: center;
-  box-shadow: 1px 1px 6px 1px rgba(53, 28, 89, 0.2);
-  margin: 10px 0px;
   font-family: "Jura", "Tahoma", sans-serif;
   font-size: 1.5em;
   font-weight: 700;
@@ -778,15 +782,9 @@ footer {
 }
 
 .events_subscribe input[type="submit"]:hover {
-  background-color: rgba(61, 173, 217, 0.7);
-  transition: 0.2s;
   cursor: pointer;
 }
 
-.events_subscribe input[type="submit"]:active {
-  background-color: rgba(61, 173, 217, 1);
-  font-size: 1.8em;
-}
 
 .events_subscribe input[type="email"] {
   width: 80%;
@@ -819,11 +817,16 @@ footer {
   background: linear-gradient(
     186deg,
     rgba(246, 164, 72, 1) 39%,
-    rgba(217, 26, 131, 1) 100%
+    rgba(236, 91, 170, 1) 100%
   );
-  color: #ffffff;
   text-align: center;
   padding: 20px 5%;
+}
+
+.get-involved_contact p {
+  color: #351c59;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .get-involved_volunteer,
@@ -846,15 +849,16 @@ footer {
 .contact_form fieldset {
   padding: 5%;
   margin: 0 auto;
-  font-size: 1.125em;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-transform: uppercase;
   max-width: 720px;
   border: none;
 }
 
-.contact_form input[type="text"],
-.contact_form input[type="email"],
-.contact_form select,
+.contact_form-name,
+.contact_form-email,
+.contact_form-select,
 .contact_form textarea {
   width: 100%;
   padding: 12px;
@@ -866,34 +870,32 @@ footer {
   display: block;
   background-color: #f7f7f7;
   cursor: text;
-  font-size: 1.125em;
+  font-size: 1em;
   font-family: inherit;
+}
+
+.contact_form textarea {
+  margin-bottom: 0;
 }
 
 .contact_form select {
   cursor: pointer;
+  color: #696969;
 }
 
 .contact_form input[type="submit"] {
-  display: inline-block;
-  background-color: #3dadd9;
-  color: #ffffff;
-  padding: 10px 28px;
-  border-radius: 6px;
-  border: none;
-  text-align: center;
-  box-shadow: 1px 1px 6px 1px rgba(53, 28, 89, 0.2);
-  margin: 10px 0px;
   font-family: "Jura", "Tahoma", sans-serif;
-  font-size: 1.5em;
-  font-weight: 700;
+  font-size: 1.5em; 
   text-transform: uppercase;
+  outline: none;
+  clear: both;
+  margin-top: 3rem;
 }
+
 .contact_form input[type="submit"]:hover {
-  background-color: rgba(61, 173, 217, 0.7);
-  transition: 0.2s;
   cursor: pointer;
 }
+
 
 .contact_information {
   background-color: #351c59;
@@ -954,11 +956,33 @@ footer {
   height: 330px;
 }
 
+.form-text-conter {
+  float: right;
+  padding: 0.5rem;
+  color: #696969;
+  font-weight: 500;
+}
+
 .form-error {
   display: none;
   color: #ff0000;
   font-size: 0.9rem;
   margin: 0 0 2rem 0;
+}
+
+.form-error-border {
+  border: 1px #ff0000 solid;
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+  resize: vertical;
+  display: block;
+  background-color: #f7f7f7;
+  cursor: text;
+  font-size: 1em;
+  font-family: inherit;
 }
 
 .message {
@@ -977,7 +1001,6 @@ footer {
 ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media all and (min-width: 600px) {
-  
   /*----------FOOTER----------*/
 
   .column-hours table,
@@ -1237,7 +1260,6 @@ footer {
 }
 
 @media all and (min-width: 960px) {
-
   .main-intro-text {
     top: 110px;
   }
@@ -1307,8 +1329,8 @@ footer {
   .home_nav {
     display: flex;
     align-items: center;
-    height: 80px; 
-    transform: none; 
+    height: 80px;
+    transform: none;
     transition: none;
     position: static;
     background: none;
@@ -1324,7 +1346,7 @@ footer {
   }
 
   .navList {
-    padding: 30px 0; 
+    padding: 30px 0;
     margin: 0;
   }
 
@@ -1346,7 +1368,6 @@ footer {
     font-size: 1.5rem;
   }
 }
-
 
 @media all and (min-width: 1690px) {
   .header img {

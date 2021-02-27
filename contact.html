@@ -48,15 +48,15 @@
             <form action="#" method="POST" id="contact-form">
                 <fieldset>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name">
+                    <input type="text" id="name" class="contact_form-name" name="name" placeholder="Your full name">
                     <div class="form-error" id="nameError">Please enter your full name</div>
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="e-mail" placeholder="Your e-mail">
+                    <input type="email" id="email" class="contact_form-email" name="e-mail" placeholder="Your email address">
                     <div class="form-error" id="emailError">
                         Please enter a valid email address
                     </div>
                     <label for="select-subject">Subject</label>
-                    <select name="subject" id="select-subject">
+                    <select name="subject" id="select-subject" class="contact_form-select">
                         <option value="">Please select a subject...</option>
                         <option value="exhibitions">Exhibitions</option>
                         <option value="events">Events</option>
@@ -66,10 +66,12 @@
                         <option value="volunteering">Volunteering</option>
                         <option value="other">Other</option>
                     </select>
+                    <div class="form-error" id="selectError">Please select the subject</div>
                     <label for="contact-message">Message</label>
                     <textarea name="message" id="contact-message" cols="30" rows="10"
-                        placeholder="Type here.."></textarea>
-                    <input type="submit" value="Send">
+                        placeholder="Type your message here.."  maxlength="500"></textarea>
+                        <div class="form-text-conter" id="textCounter"></div>
+                    <input type="submit" class="button" value="Send">
                 </fieldset>
             </form>
         </div>
@@ -107,14 +109,14 @@
 
     <footer>
         <div class="back-to-top">
-            <a href="#top" title="Back to Top">Back to Top
-                <i class="fas fa-arrow-up"></i>
+            <a href="#top" title="Back to Top">
+                <i class="fas fa-chevron-circle-up"></i>
             </a>
         </div>
         <div class="footer-wrapper">
             <div class="footer-wrapper-column column-location">
-                <a href="index.html" title="Home" class="logo">
-                    <img src="images/logo-community-science-museum.png" alt="Logo Community Science Museum">
+                <a href="index.html" title="Home">
+                    <img src="images/logo-community-science-museum.png" class="logo" alt="Logo Community Science Museum">
                 </a>
                 <h4>Location</h4>
                 <p>
