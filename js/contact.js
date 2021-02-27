@@ -4,6 +4,7 @@ const nameError = document.querySelector("#nameError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const text = document.querySelector("#contact-message");
+const textError = document.querySelector("#textError");
 const textCounter = document.querySelector("#textCounter");
 const select = document.querySelector("#select-subject");
 const selectError = document.querySelector("#selectError");
@@ -20,6 +21,14 @@ function validateForm(event) {
     name.className = "form-error-border";
   }
 
+  if (checkLength(text.value, 1) === true) {
+    textError.style.display = "none";
+    text.className = "contact_form-text";
+  } else {
+    textError.style.display = "block";
+    text.className = "form-error-border";
+  }
+
   if (validateEmail(email.value) === true) {
     emailError.style.display = "none";
     email.className = "contact_form-email";
@@ -28,17 +37,16 @@ function validateForm(event) {
     email.className = "form-error-border";
   }
 
-  if (checkLength(select.value, 0) === true) {
+  if (checkValue(select.value) === true) {
+    selectError.style.display = "block";
+    select.className = "form-error-border"; 
+  } else {
     selectError.style.display = "none";
     select.className = "contact_form-select";
-  } else {
-    selectError.style.display = "block";
-    select.className = "form-error-border";
   }
 
 
-
-  if (checkLength(name.value, 1) && validateEmail(email.value) && checkLength(select.value, 0)) {
+  if (checkLength(name.value, 1) && validateEmail(email.value) && checkLength(text.value, 1) ) {
     message.innerHTML = '<div class="message">Your message has been sent</div>';
     form.reset();
   } else {
@@ -46,7 +54,12 @@ function validateForm(event) {
   }
 }
 
+
 form.addEventListener("submit", validateForm);
+
+
+
+//---------------------------------NAME--//
 
 function checkLength(value, len) {
   if (value.trim().length >= len) {
@@ -56,7 +69,7 @@ function checkLength(value, len) {
   }
 }
 
-
+//---------------------------------EMAIL--//
 
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
@@ -64,7 +77,17 @@ function validateEmail(email) {
   return patternMatches;
 }
 
+//---------------------------------SELECT--//
 
+function checkValue() {
+  if (select.value === "") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//---------------------------------TEXTAREA--//
 
 text.addEventListener("input", textCount);
 
@@ -76,5 +99,7 @@ function textCount () {
   if (currentLength <= maxLength) {
     textCounter.style.display = "block";
     textCounter.innerHTML = `${maxLength - currentLength}`;
-  } 
+  } else {
+    textCounter.innerHTML = "";
+  }
 }

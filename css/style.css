@@ -58,7 +58,7 @@ h1 {
 h2 {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -249,6 +249,11 @@ footer {
   background-color: #351c59;
   color: #ffffff;
 }
+
+footer h4 {
+  margin-top: 1.4rem;
+}
+
 .footer-wrapper {
   display: flex;
   padding: 20px;
@@ -258,7 +263,7 @@ footer {
 }
 
 .footer-wrapper-column {
-  margin: 0 10px;
+  margin: 0 1.4rem;
   min-width: 200px;
   padding: 10px;
 }
@@ -421,18 +426,41 @@ footer .icon:active {
   text-align: left;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 100%;
 }
 
 .home_main-exhibitions-content {
   color: #000000;
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .home_main-exhibitions {
   margin: 20px;
   background-color: #e1e1e1;
   border-radius: 0 0 6px 6px;
+}
+
+.home_main-exhibitions-img,
+.home_main-event-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.home_main-exhibitions-cos {
+  background-image: url("../images/home/home-exhibitions-cosmology-andrew-ruiz-d.jpg");
+}
+
+.home_main-exhibitions-rai {
+  background-image: url("../images/home/home-exhibitions-robotics-pexels-alex-knight-d.jpg");
+}
+
+.home_main-exhibitions-bm {
+  background-image: url("../images/home/home-exhibtions-biology-medicine-heart-d.jpg");
+}
+
+.home_main-exhibitions h3 {
+  margin-top: 0;
 }
 
 .home_main-exhibitions-text {
@@ -443,7 +471,7 @@ footer .icon:active {
     rgba(236, 91, 170, 1) 100%
   );
   padding: 10px 20px;
-  margin: 40px 10%;
+  margin: 40px 5%;
   border-radius: 6px;
   display: none;
 }
@@ -460,7 +488,7 @@ footer .icon:active {
 .home_main-upcoming-events,
 .home_main-exhibition-spaces {
   text-align: center;
-  padding: 40px 20px;
+  padding: 2rem 0.5rem;
 }
 .home_main-upcoming-events h2 {
   color: #ffffff;
@@ -484,6 +512,14 @@ footer .icon:active {
   width: 100%;
 }
 
+.home_main-event-astro {
+  background-image: url("../images/home/home-events-aeronautics-james-lewis.jpg");
+}
+
+.home_main-event-night {
+  background-image: url("../images/home/home-events-night-at-museum-celso.jpg");
+}
+
 .home_main-event-content {
   padding: 25px 20px 20px 20px;
 }
@@ -492,15 +528,6 @@ footer .icon:active {
   background-color: #ffffff;
   margin: 20px;
   border-radius: 0 0 6px 6px;
-}
-
-.home_main-event img,
-.home_main-exhibitions img {
-  width: 100%;
-}
-
-.big-img {
-  display: none;
 }
 
 /*----------YOUNG STARS CLUB----------*/
@@ -552,12 +579,30 @@ footer .icon:active {
 .visit_admission,
 .visit_accessibility,
 .visit_shools {
-  padding: 5%;
+  padding: 1.5rem;
 }
 
-.visit_food img,
-.visit_shop img {
-  width: 100%;
+.visit_food-img {
+  background-image: url("../images/visit/visit-caffee-kayleigh-harrington.jpg");
+}
+.visit_shop-img {
+  background-image: url("../images/visit/visit-shop-daniel-cheung.jpg");
+}
+
+.visit_food-img,
+.visit_shop-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+  min-width: 270px;
+}
+
+.visit_food,
+.visit_shop {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .visit_shools {
@@ -633,11 +678,13 @@ footer .icon:active {
   color: #ffffff;
   padding: 20px 5%;
 }
+
 .exibitions-describtion p {
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5em;
   font-style: italic;
   color: #351c59;
+  font-size: 1.2rem;
 }
 
 .exhibition_links-icon img {
@@ -646,8 +693,9 @@ footer .icon:active {
   border-radius: 50%;
   padding: 20px;
   outline-color: #000000;
-  box-shadow: 3px 3px 3px rgba(53, 28, 89, 0.4);
+  box-shadow: 3px 3px 3px rgba(53, 28, 89, 0.4), inset 0px 2px 3px #e1e1e1;
 }
+
 .exhibition_links-icon1 {
   background-color: #3dadd9;
 }
@@ -663,36 +711,68 @@ footer .icon:active {
 .exhibition_links-icon5 {
   background-color: #d91a83;
 }
+
 .exhibitions_links {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin: 5%;
+  margin: 2rem;
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 .exhibition_links-icon {
-  margin: 0 20px;
+  margin: 1rem 20px;
 }
+
 .exhibition_links-icon a {
-  color: #000000;
+  color: #696969;
+  font-size: 1rem;
 }
+
+.exhibition_links-icon h2 {
+  margin-top: 0.5rem;
+}
+
 .exhibition_links-icon img:hover {
-  width: 105px;
-  height: 105px;
-  opacity: 0.8;
-  transition: 0.1s;
+  transform: translateY(4px);
+  opacity: 0.6;
+  transition: 0.2s;
 }
+
 .exhibition_links-icon img:active {
   opacity: 1;
 }
 
-.exhibitions_cosmology,
-.exhibitions_robotics,
-.exhibitions_biology-medicine,
-.exhibitions_evolution,
-.exhibitions_ecology {
-  padding: 5%;
+
+.exhibitions_container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exhibitions_cosmology-img {
+  background-image: url("../images/exhibitions/exhibitions-cosmology-the-new-york-public-library.jpg");
+}
+.exhibitions_evolution-img {
+  background-image: url("../images/exhibitions/exhibitions-evolution-neanderthal.jpg");
+}
+.exhibitions_robotics-img {
+  background-image: url("../images/exhibitions/exhibitions-robotics-andy-kelly.jpg");
+}
+.exhibitions_ecology-img {
+  background-image: url("../images/exhibitions/exhibitions-ecology-corleone-brown.jpg");
+}
+.exhibitions_biology-img {
+  background-image: url("../images/exhibitions/exhibitions-biology-samuel-zeller.jpg");
+}
+
+.exhibitions-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+  min-width: 270px;
 }
 
 .exhibitions_cosmology,
@@ -702,53 +782,61 @@ footer .icon:active {
   color: #ffffff;
 }
 
-.exhibitions_cosmology img,
-.exhibitions_robotics img,
-.exhibitions_biology-medicine img,
-.exhibitions_evolution img,
-.exhibitions_ecology img {
-  width: 100%;
-}
-
 /* -------------------------------------------------------------------- EVENTS
 ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+.events_aeronautics-img {
+  background-image: url("../images/events/events-aeronautics-james-lewis.jpg");
+}
+.events_night-img {
+  background-image: url("../images/events/events-night-at-museum-celso.jpg");
+}
+.events_energetica-img {
+  background-image: url("../images/events/events-energetica-marius-masalar.jpg");
+}
+
+.events_events-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+  min-width: 272px;
+}
+
+.events_events-content {
+  background-color: #e1e1e1;
+  border-radius: 0 0 6px 6px;
+  text-align: left;
+  max-width: 447px;
+  margin: 0 auto;
+}
+
+.events_aeronautics,
+.events_energetica,
+.events_events-content {
+  padding: 1.5rem;
+}
+
 .events_night {
   background-color: #351c59;
-  padding: 5% 0;
+  padding: 2.5rem 1.5rem;
 }
 
-.events_aeronautics,
-.events_night,
-.events_energetica {
-  text-align: left;
-}
-
-.events_aeronautics,
-.events_energetica {
-  background-color: #e1e1e1;
-  max-width: 280px;
-  border-radius: 0 0 6px 6px;
-  margin: 5% auto;
-}
-
-.events_aeronautics img,
-.events_night img,
-.events_energetica img {
-  width: 100%;
+.events_events-card {
+  margin: 1rem auto;
 }
 
 .events_night-content {
   background-color: #ffffff;
   color: #000000;
-  max-width: 280px;
   border-radius: 0 0 6px 6px;
+  max-width: 447px;
   margin: 0 auto;
 }
 
-.events_events-content {
-  padding: 20px;
+.events_events-content-date {
+  font-style: italic;
 }
+
 .events_subscribe {
   background-color: #f6a448;
   background: linear-gradient(
@@ -785,7 +873,6 @@ footer .icon:active {
   cursor: pointer;
 }
 
-
 .events_subscribe input[type="email"] {
   width: 80%;
   padding: 10px 20px;
@@ -806,6 +893,33 @@ footer .icon:active {
 /* -------------------------------------------------------------------- GET INVOLVED
 ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+.get-involved_volunteer-img {
+  background-image: url("../images/get-involved/get-involved-volunteer-anna-earl.jpg");
+}
+.get-involved_support-img {
+  background-image: url("../images/get-involved/get-involved-support-kelly-sikkema.jpg");
+}
+.get-involved_internships-img {
+  background-image: url("../images/get-involved/get-involved-internships.jpg");
+}
+.get-involved_researchers-img {
+  background-image: url("../images/get-involved/get-involved-researchers.jpg");
+}
+
+.get-involved-container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.get-involved-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+  min-width: 270px;
+}
+
 .get-involved_support,
 .get-involved_researchers {
   background-color: #351c59;
@@ -825,23 +939,11 @@ footer .icon:active {
 
 .get-involved_contact p {
   color: #351c59;
-  font-weight: 500;
+  font-weight: 600;
   font-style: italic;
+  font-size: 1.2rem;
 }
 
-.get-involved_volunteer,
-.get-involved_support,
-.get-involved_internships,
-.get-involved_researchers {
-  padding: 5%;
-}
-
-.get-involved_volunteer img,
-.get-involved_support img,
-.get-involved_internships img,
-.get-involved_researchers img {
-  width: 100%;
-}
 
 /* -------------------------------------------------------------------- CONTACT
 ---------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -859,7 +961,7 @@ footer .icon:active {
 .contact_form-name,
 .contact_form-email,
 .contact_form-select,
-.contact_form textarea {
+.contact_form-text {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -875,7 +977,7 @@ footer .icon:active {
 }
 
 .contact_form textarea {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 .contact_form select {
@@ -885,7 +987,7 @@ footer .icon:active {
 
 .contact_form input[type="submit"] {
   font-family: "Jura", "Tahoma", sans-serif;
-  font-size: 1.5em; 
+  font-size: 1.5em;
   text-transform: uppercase;
   outline: none;
   clear: both;
@@ -895,7 +997,6 @@ footer .icon:active {
 .contact_form input[type="submit"]:hover {
   cursor: pointer;
 }
-
 
 .contact_information {
   background-color: #351c59;
@@ -1105,26 +1206,9 @@ footer .icon:active {
 
   /*----------VISIT----------*/
 
-  .visit_food img,
-  .visit_shop img {
-    float: left;
-    margin: 0 5% 10px 0;
-    width: 495px;
-  }
-
-  .visit_food,
-  .visit_shop {
-    min-height: 330px;
-  }
-
-  .visit_accessibility,
-  .visit_schools {
-    clear: left;
-  }
-
-  .visit_food h2,
-  .visit_shop h2 {
-    margin-top: 0;
+  .visit_hours-location-container {
+    display: flex;
+    flex-direction: row;
   }
 
   .visit_hours tr {
@@ -1135,114 +1219,41 @@ footer .icon:active {
     min-height: 330px;
   }
 
-  .visit_hours-location-container {
-    flex-direction: row;
-  }
-
   .visit_location,
   .visit_hours {
     width: 100%;
   }
 
+  
   /*----------EXHIBITIONS----------*/
+
+  .exibitions-describtion p {
+    font-size: 1.7rem;
+  }
 
   .exhibitions_links {
     flex-direction: row;
   }
 
   .exhibition_links-icon h2 {
-    font-size: 2.25em;
-  }
-
-  .exhibitions_cosmology img,
-  .exhibitions_robotics img,
-  .exhibitions_biology-medicine img {
-    float: left;
-    margin: 0 5% 10px 0;
-  }
-
-  .exhibitions_evolution img,
-  .exhibitions_ecology img {
-    float: right;
-    margin: 0 0 10px 5%;
-  }
-
-  .exhibitions_cosmology,
-  .exhibitions_robotics,
-  .exhibitions_biology-medicine,
-  .exhibitions_evolution,
-  .exhibitions_ecology {
-    display: inline-block;
-  }
-
-  .exhibitions_cosmology img,
-  .exhibitions_robotics img,
-  .exhibitions_biology-medicine img,
-  .exhibitions_evolution img,
-  .exhibitions_ecology img {
-    width: 495px;
-  }
-
-  .exhibitions_cosmology h2,
-  .exhibitions_robotics h2,
-  .exhibitions_biology-medicine h2,
-  .exhibitions_evolution h2,
-  .exhibitions_ecology h2 {
-    margin-top: 0;
+    font-size: 1.5rem;
   }
 
   /*----------EVENTS----------*/
 
-  .events_aeronautics img,
-  .events_night img,
-  .events_energetica img {
-    width: 495px;
+  .events_events-img {
+    min-width: 495px;
   }
 
-  .events_aeronautics,
-  .events_energetica,
-  .events_night-content {
-    max-width: 495px;
+  .events_events-card {
+    padding: 5rem 1rem;
   }
+
   .events_subscribe input[type="email"] {
     width: 50%;
   }
 
-  /*----------GET INVOLVED----------*/
-
-  .get-involved_volunteer img,
-  .get-involved_internships img {
-    float: right;
-    margin: 0 0 10px 5%;
-  }
-
-  .get-involved_support img,
-  .get-involved_researchers img {
-    float: left;
-    margin: 0 5% 10px 0;
-  }
-
-  .get-involved_volunteer,
-  .get-involved_support,
-  .get-involved_internships,
-  .get-involved_researchers {
-    display: inline-block;
-  }
-
-  .get-involved_volunteer img,
-  .get-involved_support img,
-  .get-involved_internships img,
-  .get-involved_researchers img {
-    width: 495px;
-  }
-
-  .get-involved_volunteer h2,
-  .get-involved_support h2,
-  .get-involved_internships h2,
-  .get-involved_researchers h2 {
-    margin-top: 0;
-  }
-
+  
   /*----------CONTACT----------*/
 
   .contact_information {
@@ -1258,6 +1269,7 @@ footer .icon:active {
     font-size: 1.5em;
   }
 }
+
 
 @media all and (min-width: 960px) {
   .main-intro-text {
@@ -1295,27 +1307,138 @@ footer .icon:active {
     font-size: 2.25em;
   }
 
+  .home_main-exhibitions-img {
+    height: 250px;
+  }
+
+  .home_main-event-img {
+    height: 300px;
+  }
+
   .visit_hours tr {
     font-size: 1.5em;
   }
 
-  /*----------EVENTS----------*/
-
-  .events_aeronautics img,
-  .events_night img,
-  .events_energetica img {
-    width: 800px;
+  .footer-wrapper-column {
+    margin-bottom: 2rem;
   }
 
-  .events_aeronautics,
-  .events_energetica,
-  .events_night-content {
+  /*-----------------VISIT-----------------*/
+
+  .visit_food,
+  .visit_shop {
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .visit_accessibility, .visit_admission {
+    padding: 3rem;
+  }
+
+  .visit_food h2,
+  .visit_shop h2 {
+    margin-top: 0;
+  }
+
+  .visit_food-img,
+  .visit_shop-img {
+    min-height: 300px;
+    min-width: 495px;
+    margin-right: 2rem;
+  }
+
+  .visit_text, .visit_food-shop-text {
     max-width: 800px;
   }
+
+  .visit_text {
+    margin: 0 auto;
+  }
+
+  /*--------------EXHIBITIONS--------------*/
+
+  .exhibitions_container {
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .exhibitions_evolution,
+  .exhibitions_ecology {
+    flex-direction: row-reverse;
+  }
+
+  .exhibitions-img {
+    min-height: 300px;
+    min-width: 495px;
+    margin-right: 2rem;
+  }
+
+  .exhibitions_evolution-img,
+  .exhibitions_ecology-img {
+    margin: 0 0 0 2rem;
+  }
+
+  .exhibitions_container h2 {
+    margin-top: 0;
+  }
+
+  .exhibitions-text {
+    max-width: 800px;
+  }
+
+  /*----------EVENTS----------*/
 
   .events_subscribe input[type="email"] {
     width: 30%;
   }
+
+  /*----------GET INVOLVED----------*/
+
+  .get-involved-container {
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .get-involved_volunteer,
+  .get-involved_internships {
+    flex-direction: row-reverse;
+  }
+
+  .get-involved-img {
+    min-height: 300px;
+    min-width: 495px;
+    margin-right: 2rem;
+  }
+
+  .get-involved_volunteer-img,
+  .get-involved_internships-img {
+    margin: 0 0 0 2rem;
+  }
+
+  .get-involved-container h2 {
+    margin-top: 0;
+  }
+
+  .get-involved-text {
+    max-width: 800px;
+  }
+
+  .get-involved_contact p {
+    font-size: 1.8rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+ 
 }
 
 @media all and (min-width: 1280px) {
