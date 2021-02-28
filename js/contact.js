@@ -37,16 +37,15 @@ function validateForm(event) {
     email.className = "form-error-border";
   }
 
-  if (checkValue(select.value) === true) {
-    selectError.style.display = "block";
-    select.className = "form-error-border"; 
-  } else {
+  if (checkLength(select.value, 1) === true) {
     selectError.style.display = "none";
-    select.className = "contact_form-select";
+    select.className = "contact_form-text";
+  } else {
+    selectError.style.display = "block";
+    select.className = "form-error-border";
   }
 
-
-  if (checkLength(name.value, 1) && validateEmail(email.value) && checkLength(text.value, 1) ) {
+  if (checkLength(name.value, 1) && validateEmail(email.value) && checkLength(text.value, 1) && checkLength(select.value, 1)) {
     message.innerHTML = '<div class="message">Your message has been sent</div>';
     form.reset();
   } else {
@@ -56,7 +55,6 @@ function validateForm(event) {
 
 
 form.addEventListener("submit", validateForm);
-
 
 
 //---------------------------------NAME--//
@@ -77,15 +75,6 @@ function validateEmail(email) {
   return patternMatches;
 }
 
-//---------------------------------SELECT--//
-
-function checkValue() {
-  if (select.value === "") {
-    return true;
-  } else {
-    return false;
-  }
-}
 
 //---------------------------------TEXTAREA--//
 
